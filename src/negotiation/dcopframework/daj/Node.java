@@ -71,7 +71,7 @@ public class Node extends BasicCompetentAgent {
 		program.main();
 	}
 
-	
+	@Override
 	public void receiveMessage(Object msg){
 		if (msg instanceof DCOPMessage)
 			((Channel) in.getChannel(((DCOPMessage) msg).getSenderAsInt())).addMessage((DCOPMessage) msg); 
